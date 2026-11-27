@@ -1,0 +1,122 @@
+\clearpage
+\section{支撑材料文件列表}
+精简支撑材料共48个文件，包含32个源程序与6个官方正式测试日志。以下路径相对于压缩包根目录，运行方法见\path{README.md}。
+\begingroup
+\fontsize{8.5}{11}\selectfont
+\renewcommand{\arraystretch}{1.0}
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTpre}{3pt}
+\setlength{\LTpost}{3pt}
+\par\needspace{5\baselineskip}\noindent\textbf{目录：}根目录
+\begin{longtable}{@{}p{0.67\linewidth}p{0.28\linewidth}@{}}
+\toprule 文件名 & 用途 \\ \midrule
+\endfirsthead
+\toprule 文件名 & 用途 \\ \midrule
+\endhead
+\bottomrule\endfoot
+\path{AI}工具使用详情\path{.pdf} & AI使用详情核对稿 \\
+\path{README.md} & 阅读与运行说明 \\
+\path{requirements.txt} & Python依赖 \\
+\end{longtable}
+\par\needspace{5\baselineskip}\noindent\textbf{目录：}\path{q1}
+\begin{longtable}{@{}p{0.67\linewidth}p{0.28\linewidth}@{}}
+\toprule 文件名 & 用途 \\ \midrule
+\endfirsthead
+\toprule 文件名 & 用途 \\ \midrule
+\endhead
+\bottomrule\endfoot
+\path{cases.json} & 第一问输入、预设几何与结果 \\
+\path{q1_geometry.py} & 第一问几何求解 \\
+\end{longtable}
+\par\needspace{5\baselineskip}\noindent\textbf{目录：}\path{q2}
+\begin{longtable}{@{}p{0.67\linewidth}p{0.28\linewidth}@{}}
+\toprule 文件名 & 用途 \\ \midrule
+\endfirsthead
+\toprule 文件名 & 用途 \\ \midrule
+\endhead
+\bottomrule\endfoot
+\path{benchmark_helpers.py} & 第二问观测模拟与三规则求解 \\
+\path{geometry_snapshot.py} & 第二问几何运算 \\
+\path{policies.py} & 观测更新与选点规则 \\
+\path{practice_snapshot.py} & 演练生成与误差场 \\
+\path{results.jsonl} & 第二问5000例种子与结果 \\
+\end{longtable}
+\par\needspace{5\baselineskip}\noindent\textbf{目录：}\path{q2/search}
+\begin{longtable}{@{}p{0.67\linewidth}p{0.28\linewidth}@{}}
+\toprule 文件名 & 用途 \\ \midrule
+\endfirsthead
+\toprule 文件名 & 用途 \\ \midrule
+\endhead
+\bottomrule\endfoot
+\path{check_finalists.py} & 第二问候选点精细角度搜索 \\
+\path{compare.py} & 候选点搜索与比较 \\
+\path{geometry.py} & 几何运算 \\
+\path{model_snapshot.py} & 第二问选点损失模型 \\
+\path{result.json} & 第二问候选点与精细角度搜索结果 \\
+\end{longtable}
+\par\needspace{5\baselineskip}\noindent\textbf{目录：}\path{q3}
+\begin{longtable}{@{}p{0.67\linewidth}p{0.28\linewidth}@{}}
+\toprule 文件名 & 用途 \\ \midrule
+\endfirsthead
+\toprule 文件名 & 用途 \\ \midrule
+\endhead
+\bottomrule\endfoot
+\path{action_timing.py} & 动作时间定义 \\
+\path{bearing_correlation.py} & 空间误差相关处理 \\
+\path{cli.py} & 第三问命令行入口 \\
+\path{client.py} & HTTP协议与记录 \\
+\path{coverage_geometry.py} & 第三问覆盖几何 \\
+\path{geometry.py} & 几何运算 \\
+\path{local_simulator.py} & 本地演练模拟器 \\
+\path{moving_stations.py} & 移动检测候选生成 \\
+\path{practice_reference.py} & 演练分布生成 \\
+\path{results.jsonl} & 第三问1000例种子与结果 \\
+\path{robot.py} & 第三问滚动决策 \\
+\path{rotate_selector.py} & 覆盖布局旋转选择 \\
+\path{rotation-layouts.json} & 第三问覆盖布局 \\
+\path{sampled_recourse.py} & 条件场景后续代价 \\
+\path{tail_lens.py} & 末段定位候选 \\
+\end{longtable}
+\par\needspace{5\baselineskip}\noindent\textbf{目录：}\path{q4}
+\begin{longtable}{@{}p{0.67\linewidth}p{0.28\linewidth}@{}}
+\toprule 文件名 & 用途 \\ \midrule
+\endfirsthead
+\toprule 文件名 & 用途 \\ \midrule
+\endhead
+\bottomrule\endfoot
+\path{belief.py} & 第四问位置与方向状态 \\
+\path{coverage.py} & 第四问覆盖证明读取与排查 \\
+\path{coverage_proofs.json.gz} & 第四问覆盖证书数据 \\
+\path{entry.py} & 第四问运行入口 \\
+\path{geometry.py} & 几何运算 \\
+\path{gridline.py} & 第四问检测布局 \\
+\path{local_simulator.py} & 本地演练模拟器 \\
+\path{practice_reference.py} & 演练分布生成 \\
+\path{protocol.py} & HTTP协议与记录 \\
+\path{results.jsonl} & 第四问500例种子与结果 \\
+\path{routes.py} & 第四问路线候选 \\
+\path{strategy.py} & 第四问滚动决策 \\
+\end{longtable}
+\par\needspace{5\baselineskip}\noindent\textbf{目录：}正式测试文件\path{/3}
+\begin{longtable}{@{}p{0.67\linewidth}p{0.28\linewidth}@{}}
+\toprule 文件名 & 用途 \\ \midrule
+\endfirsthead
+\toprule 文件名 & 用途 \\ \midrule
+\endhead
+\bottomrule\endfoot
+\path{formal-p3-1-UJBC-A4W9-A6FZ-XYQF.jlog} & 第三问正式日志 \\
+\path{formal-p3-2-CQFE-KMZK-43Z9-VC6H.jlog} & 第三问正式日志 \\
+\path{formal-p3-3-5P3S-DMUG-M4NP-N8W4.jlog} & 第三问正式日志 \\
+\end{longtable}
+\par\needspace{5\baselineskip}\noindent\textbf{目录：}正式测试文件\path{/4}
+\begin{longtable}{@{}p{0.67\linewidth}p{0.28\linewidth}@{}}
+\toprule 文件名 & 用途 \\ \midrule
+\endfirsthead
+\toprule 文件名 & 用途 \\ \midrule
+\endhead
+\bottomrule\endfoot
+\path{formal-p4-1-XH33-K2C8-8MEP-YJYN.jlog} & 第四问正式日志 \\
+\path{formal-p4-2-2VV2-BRDE-U2HD-F5PU.jlog} & 第四问正式日志 \\
+\path{formal-p4-3-CPE4-6NCH-EFMC-8RVG.jlog} & 第四问正式日志 \\
+\end{longtable}
+\endgroup

@@ -1,0 +1,37 @@
+\clearpage\section{粗网格与局部增密搜索算法伪代码}\label{appendix-b}
+
+\begin{pseudocodetable}
+\begin{longtable}{@{}>{\raggedleft\arraybackslash}p{1.8em}@{\hspace{0.65em}}>{\raggedright\arraybackslash}p{\AlgorithmTextWidth}@{}}
+\toprule
+\multicolumn{2}{@{}p{\linewidth}@{}}{\textbf{算法 2}\quad 粗网格与局部增密搜索算法}\\
+\midrule
+\multicolumn{2}{@{}p{\linewidth}@{}}{\textbf{输入：}首次检测点 \(s_1\)，示向度 \(\theta_1\)，题设常量，容许误差增量 \(\Delta\)}\\
+\multicolumn{2}{@{}p{\linewidth}@{}}{\textbf{输出：}近优候选集 \(\widehat{\mathcal C}_\Delta\)，各候选评分，代表检测点 \(s^*\)}\\
+\endfirsthead
+\toprule
+\multicolumn{2}{@{}p{\linewidth}@{}}{\textbf{算法 2}\quad 粗网格与局部增密搜索算法（续）}\\
+\midrule
+\endhead
+\midrule
+\multicolumn{2}{r}{续下页}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\addlinespace[3pt]
+1. & \AlgorithmStep{0}{按式(9)构造 \(F_1\)；若为空，返回“观测不相容”}\\
+2. & \AlgorithmStep{0}{按式(18)确定搜索外包域 \(\mathcal S\)，在域内生成粗网格}\\
+3. & \AlgorithmStep{0}{\(V\gets\varnothing\)}\\
+4. & \AlgorithmStep{0}{逐级执行位置搜索}\\
+5. & \AlgorithmStep{1.2}{遍历本级每个待评价位置 \(s\)}\\
+6. & \AlgorithmStep{2.4}{若 \(s=s_1\)，令评分为 \(\rho(F_1)\)}\\
+7. & \AlgorithmStep{2.4}{否则按式(13a)至式(13c)计算近距离、无信号分支，并枚举方向反馈}\\
+8. & \AlgorithmStep{3.6}{排除不可能反馈，对其余位置集合计算最小包围圆半径}\\
+9. & \AlgorithmStep{3.6}{取各反馈半径的最大值，得到 \(\widehat J(s)\)}\\
+10. & \AlgorithmStep{2.4}{保存位置、评分及最坏反馈，加入 \(V\)}\\
+11. & \AlgorithmStep{1.2}{在低评分候选附近生成下一层增密网格}\\
+12. & \AlgorithmStep{0}{以统一精度增密复核拟用于输出的候选，将这批候选重新记为 \(V\)}\\
+13. & \AlgorithmStep{0}{\(\widehat J_{\text{基准}}\gets\) 候选集 \(V\) 中的评分最小值}\\
+14. & \AlgorithmStep{0}{\(\widehat{\mathcal C}_\Delta\gets\{v\in V:\widehat J(v)\le\widehat J_{\text{基准}}+\Delta\}\)}\\
+15. & \AlgorithmStep{0}{从评分最小的候选中取代表点 \(s^*\)，返回结果}\\
+\end{longtable}
+\end{pseudocodetable}

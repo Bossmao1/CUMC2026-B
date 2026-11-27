@@ -1,0 +1,44 @@
+\section{符号说明}
+
+本文所使用的符号及说明如表\ref{tab:old1} 所示。
+
+\begingroup
+\small
+\setlength{\tabcolsep}{4pt}
+\setlength{\TableInnerWidth}{\dimexpr\linewidth-4\tabcolsep\relax}
+\renewcommand{\arraystretch}{1.22}
+\begin{longtable}{@{}>{\centering\arraybackslash}p{0.340\TableInnerWidth}>{\centering\arraybackslash}p{0.550\TableInnerWidth}>{\centering\arraybackslash}p{0.110\TableInnerWidth}@{}}
+\caption{符号说明}\label{tab:old1}\\
+\toprule
+符号 & 含义 & 单位 \\
+\midrule
+\endfirsthead
+\multicolumn{3}{c}{表\thetable\quad 符号说明（续）}\\
+\toprule
+符号 & 含义 & 单位 \\
+\midrule
+\endhead
+\midrule
+\multicolumn{3}{r}{续下页}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\(m\) & 有效检测点数量 & — \\
+\(\theta_i\) & 第 \(i\) 次观测的示向度，自正东逆时针计量 & \(^\circ\) \\
+\(\delta\) & 测向误差半角，本文取 \(1^\circ\) & \(^\circ\) \\
+\(g=(x,y)^{\mathsf T}\) & 待确定的干扰源位置 & 米 \\
+\(P\) & 仅由多次示向度形成的角度交会区域 & — \\
+\(p_j\)、\(h\) & 定位多边形的第 \(j\) 个顶点及顶点数量 & 米，— \\
+\(D(P)\) & 角度交会区域的直径 & 米 \\
+\(\hat g(F)\) & 最小包围圆圆心 & 米 \\
+\(\Omega\) & 半径为 \(1800\) 米的题设目标圆域 & — \\
+\(s_1\)、\(s\) & 第一检测点与待选择的第二检测点 & 米 \\
+\(R\) & 同一干扰源在各次检测间不变的有效接收半径 & 米 \\
+\(d_1(g)\)、\(d_s(g)\) & 目标位置 \(g\) 到第一、第二检测点的距离 & 米 \\
+\(F_1\) & 首次返回方向后的定位区域 & — \\
+\(\rho(F)\) & 区域 \(F\) 的最小包围圆半径 & 米 \\
+\(V\) & 顶点集或数值搜索候选集，按所在问题区分 & — \\
+\(W(s,\theta)\) & 检测点 \(s\)、示向度 \(\theta\) 对应的角度约束区域 & — \\
+\(\beta\) & 第二次方向反馈的示向度 & \(^\circ\) \\
+\end{longtable}
+\endgroup

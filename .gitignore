@@ -1,0 +1,34 @@
+# Python local environment and caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# LaTeX intermediate output; the final paper/main.pdf is intentionally tracked.
+build/
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.xdv
+*.synctex.gz
+
+# New local runs and temporary files
+runs/
+results/
+q2_results_new.jsonl
+code/q2/search/result.json
+code/q2/search/geometry_check.json
+*.tmp
+*.bak
+~$*
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example

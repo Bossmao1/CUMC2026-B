@@ -1,0 +1,2 @@
+# XeLaTeX project; also select XeLaTeX in Overleaf settings.
+$pdf_mode = 5;

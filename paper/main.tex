@@ -1,0 +1,111 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+% 2026 electronic-paper layout, based on the user-supplied cumcmthesis template.
+\PassOptionsToPackage{quiet}{xeCJK}
+\PassOptionsToPackage{fontset=none}{ctex}
+\documentclass[withoutpreface,bwprint]{cumcmthesis}
+\usepackage{placeins}
+\usepackage{needspace}
+\usepackage{fvextra}
+\usepackage{mdframed}
+\newmdenv[
+  linewidth=0.9pt,linecolor=black,backgroundcolor=white,
+  roundcorner=0pt,leftmargin=0pt,rightmargin=0pt,
+  innerleftmargin=8pt,innerrightmargin=8pt,
+  innertopmargin=6pt,innerbottommargin=6pt,
+  skipabove=8pt,skipbelow=8pt,nobreak=false
+]{propositionbox}
+\geometry{a4paper,top=25mm,bottom=25mm,left=25mm,right=25mm,footskip=12mm}
+\hypersetup{hidelinks,pdftitle={基于有界示向度约束的无线电干扰源交会定位模型},pdfauthor={},pdfsubject={2026年全国大学生数学建模竞赛B题}}
+
+% Retain the template's CJK font assets and readable body size.
+\setCJKmainfont[Path=fonts/,BoldFont=SourceHanSerifCN-Bold.otf]{SourceHanSerifCN-Regular.otf}
+\IfFontExistsTF{Consolas}{\setmonofont{Consolas}}{\setmonofont{Latin Modern Mono}}
+\setCJKmonofont[Path=fonts/]{SourceHanSerifCN-Regular.otf}
+\IfFontExistsTF{SimHei}{\setCJKsansfont{SimHei}}{\setCJKsansfont{FandolHei-Regular.otf}}
+\IfFontExistsTF{SimHei}{\setCJKfamilyfont{hei}{SimHei}}{\setCJKfamilyfont{hei}{FandolHei-Regular.otf}}
+\def\heiti{\CJKfamily{hei}}
+\providecommand{\songti}{\CJKfamily{song}}
+\providecommand{\kaishu}{\CJKfamily{kai}}
+\xeCJKsetup{PunctStyle=plain}
+\renewcommand{\baselinestretch}{1.25}
+\setlength{\parskip}{0.12em}
+\setlength{\parindent}{2em}
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+\setlength{\LTleft}{0pt plus 1fill}
+\setlength{\LTright}{0pt plus 1fill}
+\setlength{\LTpre}{6pt}
+\setlength{\LTpost}{6pt}
+\setcounter{secnumdepth}{4}
+
+% Compatibility with the installed 2025/2026 LaTeX output routine:
+% keep longtable's flexible page ending, using finite shrink instead of \vss.
+\makeatletter
+\patchcmd{\LT@output}{\copy\LT@foot\vss}{\copy\LT@foot\vskip0pt plus1fil minus\normalbaselineskip}{}{}
+\patchcmd{\LT@output}{\copy\LT@foot\vss}{\copy\LT@foot\vskip0pt plus1fil minus\normalbaselineskip}{}{}
+\makeatother
+
+\newlength{\TableInnerWidth}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\captionsetup{font={small},labelfont=bf,labelsep=quad,skip=6pt}
+\captionsetup[figure]{font={small},labelfont=bf}
+\captionsetup[table]{font={small},labelfont=bf}
+% Algorithm tables share the manuscript's text and math fonts.
+\newcounter{paperalgorithm}
+\newlength{\AlgorithmTextWidth}
+\newenvironment{pseudocodetable}{%
+  \par\begingroup
+  \def\LTcaptype{paperalgorithm}% Keep algorithm and data-table counters separate.
+  \renewcommand{\baselinestretch}{1.10}\fontsize{10.5}{14}\selectfont
+  \renewcommand{\arraystretch}{1.05}\setlength{\tabcolsep}{0pt}
+  \setlength{\AlgorithmTextWidth}{\dimexpr\linewidth-2.45em\relax}
+  \setlength{\LTpre}{8pt}\setlength{\LTpost}{8pt}%
+}{\par\endgroup}
+\newcommand{\AlgorithmStep}[2]{%
+  \hspace*{#1em}\parbox[t]{\dimexpr\linewidth-#1em\relax}{\raggedright #2\strut}%
+}
+\title{基于有界示向度约束的无线电干扰源交会定位模型}
+
+\begin{document}
+\pagestyle{plain}
+\pagenumbering{arabic}
+\maketitle
+\begin{center}\heiti\zihao{4}摘\quad 要\end{center}
+\begingroup
+\fontsize{10.5}{14.2}\selectfont
+\setlength{\parskip}{0.25em}
+\noindent\hspace*{2em}\input{sections/abstract}
+\par\noindent\textbf{关键词：}无线电干扰源定位；计算几何；极小化极大；方向覆盖；滚动规划
+\par
+\endgroup
+\clearpage
+
+\input{sections/problem_restatement}
+\input{sections/problem_analysis}
+
+\input{sections/01_assumptions}
+\input{sections/02_notation}
+\input{sections/03_question1}
+\FloatBarrier
+\input{sections/04_question2}
+\FloatBarrier
+\input{sections/05_question3}
+\FloatBarrier
+\input{sections/06_question4}
+\FloatBarrier
+\input{sections/07_evaluation}
+\section*{AI工具使用声明}
+\input{sections/ai_declaration}
+
+\input{sections/references}
+
+\clearpage
+\appendix
+\renewcommand{\thesection}{附录\Alph{section}}
+\renewcommand{\thesubsection}{\Alph{section}.\arabic{subsection}}
+\input{sections/A_complexity}
+\input{sections/B_pseudocode}
+\input{sections/C_support_files}
+\input{sections/D_source_code}
+\end{document}

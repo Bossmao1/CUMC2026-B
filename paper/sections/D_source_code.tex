@@ -1,0 +1,209 @@
+\clearpage
+\section{完整源程序与运行命令}
+以下列出精简支撑包中的完整源程序。展示时删去注释、说明性文档字符串和空白行，语句与运算保持不变。运行时使用支撑包中的源文件，保留其目录结构。
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\begin{Verbatim}[fontsize=\small,breaklines=true]
+python -m pip install -r requirements.txt
+python q1/q1_geometry.py
+python q2/benchmark_helpers.py --count 10
+python q3/robot.py demo --problem 3 --seed 20260910 --quiet
+python q4/entry.py demo --problem 4 --seed 20260910 --quiet
+python q2/search/compare.py
+python q2/search/check_finalists.py
+\end{Verbatim}
+\end{mdframed}
+\begingroup
+\fvset{fontsize=\fontsize{8}{9.6}\selectfont,baselinestretch=1,numbers=left,numbersep=4pt,numberblanklines=false,breaklines=true,breakanywhere=true,breaksymbolleft={},breaksymbolright={},xleftmargin=12pt,tabsize=4}
+\par\needspace{8\baselineskip}
+\subsection*{程序 1：第一问几何求解}
+\noindent \path{q1/q1_geometry.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q1/q1_geometry.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 2：第二问观测模拟与三规则求解}
+\noindent \path{q2/benchmark_helpers.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q2/benchmark_helpers.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 3：第二问几何运算}
+\noindent \path{q2/geometry_snapshot.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q2/geometry_snapshot.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 4：观测更新与选点规则}
+\noindent \path{q2/policies.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q2/policies.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 5：演练生成与误差场}
+\noindent \path{q2/practice_snapshot.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q2/practice_snapshot.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 6：第二问候选点精细角度搜索}
+\noindent \path{q2/search/check_finalists.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q2/search/check_finalists.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 7：候选点搜索与比较}
+\noindent \path{q2/search/compare.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q2/search/compare.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 8：几何运算}
+\noindent \path{q2/search/geometry.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q2/search/geometry.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 9：第二问选点损失模型}
+\noindent \path{q2/search/model_snapshot.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q2/search/model_snapshot.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 10：动作时间定义}
+\noindent \path{q3/action_timing.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q3/action_timing.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 11：空间误差相关处理}
+\noindent \path{q3/bearing_correlation.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q3/bearing_correlation.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 12：第三问命令行入口}
+\noindent \path{q3/cli.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q3/cli.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 13：HTTP协议与记录}
+\noindent \path{q3/client.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q3/client.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 14：第三问覆盖几何}
+\noindent \path{q3/coverage_geometry.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q3/coverage_geometry.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 15：几何运算}
+\noindent \path{q3/geometry.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q3/geometry.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 16：本地演练模拟器}
+\noindent \path{q3/local_simulator.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q3/local_simulator.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 17：移动检测候选生成}
+\noindent \path{q3/moving_stations.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q3/moving_stations.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 18：演练分布生成}
+\noindent \path{q3/practice_reference.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q3/practice_reference.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 19：第三问滚动决策}
+\noindent \path{q3/robot.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q3/robot.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 20：覆盖布局旋转选择}
+\noindent \path{q3/rotate_selector.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q3/rotate_selector.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 21：条件场景后续代价}
+\noindent \path{q3/sampled_recourse.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q3/sampled_recourse.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 22：末段定位候选}
+\noindent \path{q3/tail_lens.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q3/tail_lens.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 23：第四问位置与方向状态}
+\noindent \path{q4/belief.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q4/belief.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 24：第四问覆盖证明读取与排查}
+\noindent \path{q4/coverage.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q4/coverage.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 25：第四问运行入口}
+\noindent \path{q4/entry.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q4/entry.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 26：几何运算}
+\noindent \path{q4/geometry.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q4/geometry.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 27：第四问检测布局}
+\noindent \path{q4/gridline.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q4/gridline.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 28：本地演练模拟器}
+\noindent \path{q4/local_simulator.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q4/local_simulator.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 29：演练分布生成}
+\noindent \path{q4/practice_reference.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q4/practice_reference.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 30：HTTP协议与记录}
+\noindent \path{q4/protocol.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q4/protocol.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 31：第四问路线候选}
+\noindent \path{q4/routes.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q4/routes.py}
+\end{mdframed}
+\par\needspace{8\baselineskip}
+\subsection*{程序 32：第四问滚动决策}
+\noindent \path{q4/strategy.py}\par
+\begin{mdframed}[linewidth=0.45pt,linecolor=black,backgroundcolor=white,innerleftmargin=5pt,innerrightmargin=5pt,innertopmargin=4pt,innerbottommargin=4pt,skipabove=5pt,skipbelow=5pt,everyline=true]
+\VerbatimInput{appendix_code/q4/strategy.py}
+\end{mdframed}
+\endgroup
